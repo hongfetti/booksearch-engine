@@ -8,13 +8,24 @@
     "start:dev": "concurrently \"cd server && npm run watch\" \"wait-on tcp:3001 && cd client && npm run dev\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "build": "concurrently \"cd server && npm run build\" \"cd client && npm run build\"",
-    "render-build":"npm install && npm run build"
+    "render-build": "npm install && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
     "concurrently": "^8.2.0",
     "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.3",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "graphql": "^16.10.0"
   }
 }
